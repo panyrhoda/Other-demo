@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta http-equiv="Content-Language" content="zh-CN" /> 
+
+  <title>任务一</title>
+
+  <style>
+
+	.main{
+		display: flex;
+		flex-direction: column;
+	    justify-content: center;
+	    align-items: center;
+	}
+
+	.out{
+		display: flex;
+	    justify-content: center;
+	    align-items: center;
+
+	    position:relative;
+
+	    width: 128px;
+	    height: 85.5px;
+	    background: black;
+
+	    background-clip: text;
+	    -webkit-background-clip: text;
+	}
+
+	.container{
+		display: flex;
+	    justify-content: center;
+	    align-items: center;
+
+	    width: 0;
+	    height: 80%;
+	    background: blue;
+	    white-space:nowrap;
+
+	    background-clip: text;
+	    -webkit-background-clip: text;
+
+	    transition: all .8s;
+	}
+
+	h1{
+		color: transparent;
+	    text-fill-color: transparent;
+	    background-clip: text;
+	    -webkit-text-fill-color: transparent;
+	    -webkit-background-clip: text;
+	}
+
+	.container::after{
+		content: "";
+
+		display: block;
+	    position:absolute;
+
+		width:100%;
+		height:5%;
+		top:80%;
+		background:blue;
+
+	    transform-origin: center center;
+	    transform: scale3d(0, 1, 0);
+
+	    transition: all .8s;
+	}
+
+	.active{
+		width: 100%;
+	}
+
+	.active::after{
+	    transform: none;
+	}
+
+  </style>
+
+</head>
+<body>
+
+	<div class="main">
+		<div class="out">
+			<div id="container" class="container">
+			    <h1>前端学院</h1>
+			</div>
+		</div>
+		<button id="button">切换样式</button>
+	</div>
+
+	<script type="text/javascript">
+		var container = document.getElementById('container');
+		var button = document.getElementById('button');
+		function transition() {
+			container.classList.toggle('active');
+		}
+		button.addEventListener('click', transition);
+	</script>
+
+</body>
+</html>
