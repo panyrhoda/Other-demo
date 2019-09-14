@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta http-equiv="Content-Language" content="zh-CN" /> 
+
+  <title>任务二</title>
+
+  <style>
+
+	.main{
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+	}
+
+  	h4 {
+  		width:36px;
+  		height: 16px;
+		display: flex;
+	    justify-content: center;
+	    align-items: center;
+  		border:2px solid rgb(235,235,235);
+  		background-color: rgb(247,246,246);
+  		padding: 24px 10px 24px 10px;
+  		margin: 24px 24px 24px 24px;
+
+  	}
+
+  	.box1 {
+  		transform:skewX(30deg);
+  	}
+
+  	.box2 {
+  		transform-origin: left;
+  		transform:scaleX(0.5);
+  	}
+
+  	.box3 {
+  		transform:rotate(45deg);
+  	}
+
+  	.box4 {
+  		transform:translate(10px,20px);
+  	}
+
+  	.box5 {
+  		transform: translate(30px,60px) rotate(45deg) skewX(40deg) scaleX(1.5);
+
+   	}
+
+  </style>
+
+</head>
+<body>
+
+	<div class="main">
+
+		<h4>box0</h4>
+		<h4 class='box1'>box1</h4>
+		<h4 class='box2'>box2</h4>
+		<h4 class='box3'>box3</h4>
+		<h4 class='box4'>box4</h4>
+		<h4 class='box5'>box5</h4>
+
+	</div>
+
+</body>
+</html>
