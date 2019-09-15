@@ -116,8 +116,9 @@
                 width: 50px;
                 background: red;
                 top: 45px;
-                /*top: 64px;*/
-                left: 18px;
+                /*top: 64px;*//*
+                left: 18px;*/
+                left: 25px;
                 border-radius: 50% 50% 50% 50%;
                 background: #e85a5e;
                 opacity: 0.0;
@@ -181,9 +182,12 @@
             .eye-bottom {
                 transition: all .5s;
             }
+            .eye-core {
+                transition: all .5s;
+            }
 
             .container:hover .ear {
-                transform: rotate(-45deg);;
+                transform: rotate(-45deg);
             }
             .container:hover .ear-wrap .right {
                 transform: rotate(45deg);
@@ -199,6 +203,10 @@
             }
             .container:hover .eye-bottom {
                 margin-top: 30px;
+            }
+            .container:hover .eye-core {
+                width: 40px;
+                margin-left: -20px;
             }
         </style>
     </head>
